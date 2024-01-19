@@ -34,7 +34,10 @@ Instalamos un ambiente virtual con `jupyter` y `pandas` usando `poetry install`.
 
 En el archivo `upload-data.ipynb` se cargan los datos a a la base. Ojo que primero hay que seleccionar el nuevo ambiente de poetry como intérprete de Python para poder ejecutarlo.
 
-## Question 3. Count records
+## Question 3 - 6
+
+Estas respuestas se encuentran en el archivo `queries.sql`
+
 
 
 
