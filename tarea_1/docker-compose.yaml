@@ -1,0 +1,21 @@
+
+services:
+  db:
+    container_name: postgres
+    image: postgres:15
+    ports:
+      - 5437:5432
+    environment:
+      POSTGRES_PASSWORD: nytaxi
+      POSTGRES_USER: nytaxi
+      POSTGRES_DB: nytaxi
+    healthcheck:
+      test: ["CMD", "/usr/bin/pg_isready", "-U", "nytaxi"]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+      - ./dumps:/dumps
+
+
